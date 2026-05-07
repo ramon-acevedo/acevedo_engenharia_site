@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acevedo Engenharia - Projetos Complementares de Combate a Incêndio">
+    <meta name="keywords" content="engenharia, incêndio, projetos, segurança, consultoria">
+    <meta name="author" content="Acevedo Engenharia">
+    
+    <title>{% block title %}Acevedo Engenharia - Projetos de Combate a Incêndio{% endblock %}</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo-brand">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Acevedo Engenharia">
+                    <div class="logo-text">
+                        <h1>Acevedo Engenharia</h1>
+                        <p>Projetos Complementares</p>
+                    </div>
+                </a>
+                
+                <nav id="nav-menu">
+                    <a href="#home">Início</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+                
+                <button class="menu-toggle" id="menu-toggle">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <div class="flex gap-3 mb-4">
+                        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Acevedo Engenharia" style="height: 3rem; width: auto;">
+                        <div>
+                            <h3 style="font-weight: 600; margin: 0;">Acevedo Engenharia</h3>
+                            <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.7); margin: 0;">Projetos Complementares</p>
+                        </div>
+                    </div>
+                    <p>Especializada em projetos preventivos de combate a incêndio com excelência técnica e conformidade regulatória.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="footer-contact">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <div>
+                            <p style="margin: 0; font-size: 0.875rem; color: rgba(255, 255, 255, 0.7);">Telefone</p>
+                            <a href="tel:48999488177" style="color: #ffffff; font-weight: 600;">(48) 99948-8177</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <div>
+                            <p style="margin: 0; font-size: 0.875rem; color: rgba(255, 255, 255, 0.7);">E-mail</p>
+                            <a href="mailto:acevedoengenharia@gmail.com" style="color: #ffffff; font-weight: 600; word-break: break-all;">acevedoengenharia@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="footer-divider">
+                <p>&copy; 2024 Acevedo Engenharia. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
